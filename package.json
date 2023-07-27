@@ -1,0 +1,35 @@
+{
+  "name": "catppuccino",
+  "version": "0.0.1",
+  "description": "Catppuccin theme for Discord",
+  "repository": "https://github.com/nvim-jo/Catppucino",
+  "license": "MIT",
+  "author": {
+    "name": "Catppuccin Org",
+    "email": "core@catppuccin.com"
+  },
+  "contributors": [
+    {
+      "name": "jo-project",
+      "email": "jo.project.0911@gmail.com"
+    }
+  ],
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist/dist && sass -I node_modules --no-charset --no-source-map src:dist/dist",
+    "release": "node build.js && mkdir -p dist/dist && sass -I node_modules --no-charset --no-source-map src:dist/dist && rm src/catppuccin-*-*.theme.scss",
+    "watch": "mkdir -p dist/dist && sass -I node_modules --no-charset --no-source-map src:dist/dist -w",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@catppuccin/highlightjs": "^0.1.1",
+    "@catppuccin/palette": "^0.1.6",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0"
+  },
+  "lint-staged": {
+    "*.{js,sass,scss}": "prettier --write"
+  }
+}
