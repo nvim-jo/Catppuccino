@@ -1,10 +1,10 @@
 /**
  * @name Catppuccin Latte
- * @author JW#0623
- * @authorId 780493281552760862
- * @version 0.0.1
+ * @author winston#0001
+ * @authorId 505490445468696576
+ * @version 0.2.0
  * @description 🎮 Soothing pastel theme for Discord
- * @website https://github.com/nvim-jo/Catppuccino
+ * @website https://github.com/catppuccin/discord
  * @invite r6Mdz5dpFc
 **/
 button[class*=emojiButtonNormal] > div > div {
@@ -2367,7 +2367,7 @@ span[class*=channelMention]:hover,
 }
 
 .withFrame-2dL45i .winButtonMinMax-3RsPUg:nth-child(4)::after {
-  background-color: var(--minimize-button-color) !important;
+  background-color: var(rgba(247, 188, 27, 0.8705882353)) !important;
   margin-top: 0px;
 }
 
@@ -2375,12 +2375,23 @@ span[class*=channelMention]:hover,
   transform: scale(1.1);
 }
 
-[class^=winButtonMinMax-]::after {
-  content: "";
-  padding: 7px;
-  border-radius: 50px;
-  pointer-events: fill;
-  transition-duration: 200ms;
+.withFrame-2dL45i .winButton-3UMjdg:nth-last-child(1) {
+  order: 2;
+}
+
+.withFrame-2dL45i .winButton-3UMjdg:nth-last-child(2) {
+  order: 3;
+}
+
+.withFrame-2dL45i .winButton-3UMjdg:nth-last-child(3) {
+  order: 1;
+}
+
+.wordmarkWindows-2dq6rw svg {
+  position: fixed;
+  top: 3px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .theme-light code.hljs {

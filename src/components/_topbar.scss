@@ -1,3 +1,5 @@
+// Mac Like Titlebar
+
 $close-button-color: #e92a2ade;
 $minimize-button-color: #f7bc1bde;
 $maximize-button-color: #12db33de;
@@ -54,7 +56,7 @@ $button-position: row;
 }
 
 .withFrame-2dL45i .winButtonMinMax-3RsPUg:nth-child(4)::after {
-  background-color: var(--minimize-button-color) !important;
+  background-color: var($minimize-button-color) !important;
   margin-top: 0px;
 }
 
@@ -62,11 +64,21 @@ $button-position: row;
   transform: scale(1.1);
 }
 
-// Attribute selector usage
-[class^="winButtonMinMax-"]::after {
-  content: "";
-  padding: 7px;
-  border-radius: 50px;
-  pointer-events: fill;
-  transition-duration: 200ms;
+.withFrame-2dL45i .winButton-3UMjdg:nth-last-child(1) {
+  order: 2;
+}
+
+.withFrame-2dL45i .winButton-3UMjdg:nth-last-child(2) {
+  order: 3;
+}
+
+.withFrame-2dL45i .winButton-3UMjdg:nth-last-child(3) {
+  order: 1;
+}
+
+.wordmarkWindows-2dq6rw svg {
+  position: fixed;
+  top: 3px;
+  left: 50%;
+  transform: translate(-50%);
 }
