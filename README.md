@@ -1,3 +1,3 @@
 # Catppuccino
 
-Fork of Catppuccin Discord
+Fork of [Catppuccin Discord](https://github.com/catppuccin/discord)
